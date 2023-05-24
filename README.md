@@ -8,8 +8,8 @@
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
 ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)
-![Insomnia](https://img.shields.io/badge/Insomnia-black?style=for-the-badge&logo=insomnia&logoColor=5849BE)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+
+
 
 ## Table of Contents
 
@@ -36,7 +36,7 @@
 \*[email](#email)
 
 ## License
-
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 This project is licensed under the MIT license.
 https://opensource.org/licenses/MIT
@@ -60,7 +60,7 @@ To help lost pets find their way home.
 ## Contributing
 
 [Contributor Covenant](https://www.contributor-covenant.org/)
-Jen Warniner, Antoine Michels, Jerrick Johnson, Jason Weaver
+Jen Wariner, Antoine Michels, Jerrick Johnson, Jason Weaver
 
 ## Challenge
 
