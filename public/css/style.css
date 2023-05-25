@@ -1,0 +1,23 @@
+.bigTitle {
+    font-size: 100px;
+    font-weight: 900;
+    animation: tada;
+    animation-duration: 2s;
+}
+
+.bodyTxtLeft {
+    font-size: 20pt;
+    animation: fadeInLeftBig;
+    animation-duration: 1.5s;
+}
+
+.bodyTxtRight {
+    font-size: 20pt;
+    animation: fadeInRightBig;
+    animation-duration: 1.5s;
+}
+
+.imgEntrance {
+    animation: rubberBand;
+    animation-duration: 2s;
+}
