@@ -14,14 +14,14 @@ Notification.init(
     pet_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'Item',
+        model: 'Pet',
         key: 'id',
       },
     },
     pet_owner: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'Item',
+        model: 'Pet',
         key: 'user_id',
       },
     },
