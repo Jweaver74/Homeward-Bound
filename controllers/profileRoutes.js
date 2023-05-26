@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { User, Pet,Notification} = require('../../models');
-const withAuth = require('../../utils/auth');
+const { User, Pet,Notification} = require('../models');
+const withAuth = require('../utils/auth');
 
 // GET /api/pets
 router.get('/', withAuth, async (req, res) => {
@@ -34,7 +34,7 @@ router.get('/', withAuth, async (req, res) => {
 
 const notifications = notificationData.map((n) => n.get({ plain: true }));
 const pets = petData.map((pet) => pet.get({ plain: true }));
-const user = userdata.get({ plain: true });
+const user = userData.get({ plain: true });
 
 res.render('profile', {
     user,

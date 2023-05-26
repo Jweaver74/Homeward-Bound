@@ -21,7 +21,7 @@ router.get("/", async (req, res) => {
         },
         include: [
           {
-            model: Pet,
+            model: pet,
             attributes: ["name"],
           },
         ],
