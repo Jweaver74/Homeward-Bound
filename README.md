@@ -70,9 +70,16 @@ Clone the repo, install the dependencies, and run `npm start` to start the serve
 ## Tests
 
 ## Contributing
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
-[Contributor Covenant](https://www.contributor-covenant.org/)
-Jen Wariner, Antoine Michels, Jerrick Johnson, Jason Weaver
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)]
+(https://www.contributor-covenant.org/)
+
+Jen Wariner
+
+Antoine Michels
+
+ Jerrick Johnson
+ 
+  Jason Weaver
 
 ## Challenge
 
