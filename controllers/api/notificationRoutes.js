@@ -1,6 +1,5 @@
 const router = require("express").Router();
-const { Notification } = require("../../models");
-
+const { Notification } = require("../models");
 
 // GET /api/notifications
 router.post("/", async (req, res) => {
@@ -16,7 +15,6 @@ router.post("/", async (req, res) => {
     res.status(400).json(err);
   }
 });
-
 
 // DELETE /api/notifications/:id
 router.delete("/:id", async (req, res) => {

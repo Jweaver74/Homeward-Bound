@@ -42,7 +42,7 @@ router.get("/", withAuth, async (req, res) => {
 });
 
 // GET /api/pets/:id
-router.put("/isfound/:id", async (req, res) => {
+router.put("/isFound/:id", async (req, res) => {
   try {
     const petData = await Pet.update(
       {
