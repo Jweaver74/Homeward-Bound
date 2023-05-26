@@ -1,0 +1,23 @@
+<section class="card">
+  <a href="/pets/{{id}}">
+    <header>{{pets.name}}</header>
+
+    <div class="card-body">
+      <img src="/images/{{filename}}" alt="{{description}}">
+      <p>Reported By: {{user.username}}</p>
+      <br>
+      <p>Date Reported: {{format_date pets.date_added}}</p>
+      <br>
+      <h3>Pet Information</h3>
+      <p>Type: {{pets.type}}</p>
+      <p>Breed: {{pets.breed}}</p>
+      <p>Age: {{pets.age}}</p>
+      <p>Description: {{pets.description}}</p>
+      <p>Owner Name: {{pets.owner_name}}</p>
+      <p>Owner Phone: {{pets.owner_phone}}</p>
+      <p>Owner Email: {{pets.owner_email}}</p>
+      <br>
+      <p>Reward: {{pets.reward}}</p>
+    </div>
+  </a>
+</section>
