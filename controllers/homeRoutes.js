@@ -1,5 +1,6 @@
 const withAuth = require("../utils/auth");
 const router = require("express").Router();
+const { User, Pet, Notification } = require("../models");
 //GET all itemsand join with user data
 router.get("/", async (req, res) => {
   try {
@@ -13,6 +14,7 @@ router.get("/", async (req, res) => {
     });
     // Serialize data so the template can read it
     const pets = petData.map((pet) => pet.get({ plain: true }));
+    console.log(pets);
 
     if (req.session.logged_in) {
       const notificationData = await Notification.findAll({
