@@ -1,6 +1,6 @@
 const User = require('./user');
 const Pet = require('./pets');
-const Notification = require('./Notification');
+const Notification = require('./notifications');
 
 User.hasMany(Pet, {
   foreignKey: 'user_id',
