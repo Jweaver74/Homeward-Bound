@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Item extends Model {}
+class Pet extends Model {}
 
 Pet.init(
   {
@@ -35,6 +35,21 @@ Pet.init(
     description: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    owner_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    owner_phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    owner_email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+       isEmail: true,
+      },
     },
     reward: {
       type: DataTypes.INTEGER,
