@@ -1,0 +1,20 @@
+<div>
+  <h1>Pet Lost & Found</h1>
+  <p>Helping owners and lost pets find each other! </p>
+  <hr class="my-4">
+  <p>Did you recently lose a pet and need help finding it?</p>
+  <p>Just click the button below to report your lost pet so other users can help you find it!</p>
+  <a href="/pets" class="btn btn btn-lg reportBtn">Report Lost Pet</a>
+</div>
+
+<div>
+{{#if pets.length}}
+    <h2>Current List of Lost Pets</h2>
+    {{#each pets as |pet|}}
+    {{> pet-details}}
+    {{/each}}
+
+{{else}}
+<h2>No missing pets</h2>
+{{/if}}
+</div>
