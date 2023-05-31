@@ -15,7 +15,7 @@ router.get('/', withAuth, async (req, res) => {
             ],
         });
 
-        const userdata = await User.findByPk(req.session.user_id, {
+        const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
             include: [{ model: Pet }],
         });
