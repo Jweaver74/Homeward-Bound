@@ -19,26 +19,43 @@
 </head>
 
 <body>
-    <header>
-        <h1>Homeward Bound</h1>
-        <h2>Help Me Find My Way Home</h2>
-    </header>
-    <nav>
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-    </nav>
-    <main class="container container-fluid mt-5">
-        <div class="listings">
-            {{{ body }}}
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Homeward Bound</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    {{!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+                    </li> --}}
+                    {{#if logged_in}}|
+                    <li class="nav-item">
+                        <button class="no-button btn btn-primary me-2" id="logout">Logout</button>
+                    </li>
+                    {{else}}
+                    <a class="nav-link" href="/login">Login</a>
+                    {{/if}}
+                </ul>
+            </div>
         </div>
+    </nav>
+    
+    <main class="container container-fluid mt-5">
+        {{{ body }}}
     </main>
+    <footer>
+
+    </footer>
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
+
 </body>
 
 </html>
