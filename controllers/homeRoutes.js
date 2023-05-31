@@ -1,7 +1,7 @@
 const withAuth = require("../utils/auth");
 const router = require("express").Router();
 const { User, Pet, Notification } = require("../models");
-//GET all itemsand join with user data
+//GET all items and join with user data
 router.get("/", async (req, res) => {
   try {
     const petData = await Pet.findAll({
@@ -14,22 +14,24 @@ router.get("/", async (req, res) => {
     });
     // Serialize data so the template can read it
     const pets = petData.map((pet) => pet.get({ plain: true }));
-    console.log(pets);
+   
 
     if (req.session.logged_in) {
+    
       const notificationData = await Notification.findAll({
         where: {
           pet_owner: req.session.user_id,
         },
         include: [
           {
-            model: pet,
+            model: Pet,
             attributes: ["name"],
           },
         ],
       });
 
       const notifications = notificationData.map((n) => n.get({ plain: true }));
+      console.log(notificationData);
       res.render("homepage", {
         pets,
         notifications,
@@ -96,8 +98,5 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.get("/signup", (req, res) => {
-  res.router("signup");
-});
 
 module.exports = router;
