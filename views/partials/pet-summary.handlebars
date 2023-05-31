@@ -1,0 +1,20 @@
+<section class="card">
+    <h5 class="card-title p-3 mb-2 bg-black text-white">{{name}} Posted by {{user.username}} on {{format_date date_posted}}</h5>
+
+    <div class="card-body">
+      <p class="card-text text-black">Reported by: {{user.username}}</p>
+      <p class="card-text text-black">Date Reported: {{format_date date_added}}</p>
+      <h3>Pet Information</h3>
+      <p class="card-text text-black">Type: {{type}}</p>
+      <p class="card-text text-black">Breed: {{breed}}</p>
+      <p class="card-text text-black">Age: {{age}}</p>
+      <p class="card-text text-black">Description: {{description}}</p>
+      <p class="card-text text-black">Owner Name: {{owner_name}}</p>
+      <p class="card-text text-black">Owner Phone: {{owner_phone}}</p>
+      <p class="card-text text-black">Owner Email: {{owner_email}}</p>
+      <p class="card-text text-black">Reward: {{reward}}</p>
+
+    </div>
+    <a href='/profile/updatePet/{{id}}' class="edit-post-btns btn btn-primary mb-3 mx-3" id="edit-post-button"
+    style="width: 30%; padding: 3px;" type="submit">Edit Pet</a>
+</section>
