@@ -1,23 +1,38 @@
-.bigTitle {
+.pgFormat {
+    background-color: #ddaf94c3;
+    color: #333a4d;
+    font-size: 16pt;
+    font-weight: 1000;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .bigTitle {
     font-size: 100px;
-    font-weight: 900;
-    animation: tada;
-    animation-duration: 2s;
-}
-
-.bodyTxtLeft {
-    font-size: 20pt;
+    font-family: 'Cherry Bomb One', cursive;
+    color: #333a4d;
+    animation: rotateInDownLeft;
+    animation-duration: 1s;
+  }
+  
+  .littleTitle {
+    font-size: 60px;
+    font-family: 'Cherry Bomb One', cursive;
+    color: #333a4d;
+    animation: backInDown;
+    animation-duration: 1s;
+  }
+  
+  .imgEntrance {
+    animation: rubberBand;
+    animation-duration: 1.5s;
+  }
+  
+  .bodyTxtLeft {
     animation: fadeInLeftBig;
     animation-duration: 1.5s;
-}
-
-.bodyTxtRight {
-    font-size: 20pt;
+  }
+  
+  .bodyTxtRight {
     animation: fadeInRightBig;
     animation-duration: 1.5s;
-}
-
-.imgEntrance {
-    animation: rubberBand;
-    animation-duration: 2s;
-}
+  }
