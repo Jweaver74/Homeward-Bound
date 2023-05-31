@@ -1,17 +1,17 @@
 [
     {
         "username": "admin",
-        "email": "admin@localhost",
+        "email": "admin@localhost.com",
         "password": "admin"
     },
     {
         "username": "user1",
-        "email": "user1@localhost",
+        "email": "user1@localhost.com",
         "password": "user1"
     },
     {
         "username": "user2",
-        "email": "user2@localhost",
+        "email": "user2@localhost.com",
         "password": "user2"
     }
 ]
