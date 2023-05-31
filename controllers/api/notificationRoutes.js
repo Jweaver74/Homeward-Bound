@@ -5,8 +5,8 @@ const { Notification } = require("../../models");
 router.post("/", async (req, res) => {
   try {
     const newNotification = await Notification.create({
-      item_id: req.body.item_id,
-      item_owner: req.body.item_owner,
+      pet_id: req.body.pet_id,
+      pet_owner: req.body.pet_owner,
       found_user: req.body.found_user,
     });
 
