@@ -1,38 +1,60 @@
 .pgFormat {
-    background-color: #ddaf94c3;
-    color: #333a4d;
-    font-size: 16pt;
-    font-weight: 1000;
-    font-family: 'Orbitron', sans-serif;
-  }
-  
-  .bigTitle {
-    font-size: 100px;
-    font-family: 'Cherry Bomb One', cursive;
-    color: #333a4d;
-    animation: rotateInDownLeft;
-    animation-duration: 1s;
-  }
-  
-  .littleTitle {
-    font-size: 60px;
-    font-family: 'Cherry Bomb One', cursive;
-    color: #333a4d;
-    animation: backInDown;
-    animation-duration: 1s;
-  }
-  
-  .imgEntrance {
-    animation: rubberBand;
-    animation-duration: 1.5s;
-  }
-  
-  .bodyTxtLeft {
-    animation: fadeInLeftBig;
-    animation-duration: 1.5s;
-  }
-  
-  .bodyTxtRight {
-    animation: fadeInRightBig;
-    animation-duration: 1.5s;
-  }
+  background-color: #d6b29cc3;
+  color: #333a4d;
+  font-size: 16pt;
+  font-weight: 1000;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.bigTitle {
+  font-size: 100px;
+  font-family: 'Cherry Bomb One', cursive;
+  color: #333a4d;
+}
+
+.littleTitle {
+  font-size: 60px;
+  font-family: 'Cherry Bomb One', cursive;
+  color: #333a4d;
+}
+
+/* assorted animation classes */
+.fadeIntLeft {
+  animation: fadeInLeftBig;
+  animation-duration: 1.5s;
+}
+
+.fadeInRight {
+  animation: fadeInRightBig;
+  animation-duration: 1.5s;
+}
+
+.backInDown {
+  animation: backInDown;
+  animation-duration: 1s;
+}
+
+.flipIn {
+  animation: flipInY;
+  animation-duration: 1s;
+}
+
+.lightSpeedRight {
+  animation: lightSpeedInRight;
+  animation-duration: 1s;
+}
+
+.rotIn {
+  animation: rotateIn;
+  animation-duration: 1s;
+}
+
+.rotInDown {
+  animation: rotateInDownLeft;
+  animation-duration: 1s;
+}
+
+.rollIn {
+  animation: rollIn;
+  animation-duration: 1s;
+}
