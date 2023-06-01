@@ -38,9 +38,9 @@ const newFormHandler = async (event) => {
   };
   
   document
-    .querySelector('.new-pet-form')
+    .querySelector('#addPetForm')
     .addEventListener('submit', newFormHandler);
   
   document
-    .querySelector('.pet-list')
+    .querySelector('#pet-list')
     .addEventListener('click', delButtonHandler);

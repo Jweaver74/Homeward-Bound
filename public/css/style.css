@@ -10,14 +10,23 @@
   font-size: 100px;
   font-family: 'Cherry Bomb One', cursive;
   color: #333a4d;
-}
-
-.littleTitle {
-  font-size: 60px;
-  font-family: 'Cherry Bomb One', cursive;
-  color: #333a4d;
-}
-
+  }
+  
+  .littleTitle {
+    font-size: 60px;
+    font-family: 'Cherry Bomb One', cursive;
+    color: #333a4d;
+  }
+  
+  .navbar-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-nav li {
+    display: inline-block;
+  }
 /* assorted animation classes */
 .fadeIntLeft {
   animation: fadeInLeftBig;
