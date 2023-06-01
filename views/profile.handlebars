@@ -1,13 +1,16 @@
 <div class="d-flex">
     <div>
         <h2>My Profile</h2>
+        <br>
         <a href="/profile/addPet" type="button"
             class="btn btn-primary me-4 mt-2 mb-2">Post New
             Lost Pet</a>
     </div>
 </div>
 <div>
-    <h4>My Pet Posts</h4>
+    <br>
+    <h4>My Lost Pet Posts</h4>
+    <br>
     {{#each pets as |pet|}}
     {{> pet-summary}}
     {{/each}}
