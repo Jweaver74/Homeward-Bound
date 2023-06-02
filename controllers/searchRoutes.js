@@ -19,7 +19,7 @@ router.get("/:terms", async (req, res) => {
     // Serialize data so the template can read it
     const pets = petData.map((pet) => pet.get({ plain: true }));
     // Pass serialized data and session flag into template
-    res.render("single-pet", { pets, logged_in: req.session.logged_in });
+    res.render("search", { pets, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
