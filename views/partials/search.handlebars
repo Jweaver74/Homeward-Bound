@@ -1,12 +1,11 @@
-{{! <div class="jumbotron-fluid text-center p-5" id="lostJumbo"> }}
-{{! <h1 class="display-4">Pet Lost & Found</h1> }}
-{{! <p class="lead">Help me find my way home! </p> }}
-{{! <hr class="my-4" /> }}
-{{! <p>Did you recently loose a pet and need help bringing him home?</p> }}
-{{! <p>Just click the button below to report your lost pet</p> }}
-{{! <a href="/profile" class="btn btn btn-lg reportBtn">Report Lost Pet</a> }}
-{{! </div> }}
-
+<div>
+  <h1>Pet Lost & Found</h1>
+  <p>Help me find my way home! </p>
+  <hr class="my-4">
+  <p>Did you recently lose a pet and need help finding it?</p>
+  <p>Just click the button below to report your lost pet so other users can help you find it!</p>
+  <a href="/profile" class="btn btn btn-lg reportBtn">Report Lost Pet</a>
+</div>
 <div class="container text-center my-4">
 
   <form
@@ -29,7 +28,7 @@
 
   {{#if pets.length}}
     <div class="container">
-      <h2 class="border-bottom pb-2">Current List of all lost pets</h2>
+      <h2 class="border-bottom pb-2">Lost pets</h2>
       <div class="row d-flex justify-content-center">
         {{#each pets as |pet|}}
           {{#unless pet.isFound}}
@@ -60,4 +59,6 @@
   {{/if}}
 </div>
 
+
 <script src="/js/search.js"></script>
+
