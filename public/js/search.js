@@ -1,7 +1,7 @@
 const newSearchHandler = async (event) => {
   event.preventDefault();
 
-  let search = document.querySelector("#search").value.trim();
+  let search = document.querySelector("#searchfield").value.trim();
   search = search.split(" ").join("+");
 
   if (search) {
