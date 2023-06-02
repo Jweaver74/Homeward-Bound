@@ -10,32 +10,38 @@
   font-size: 100px;
   font-family: 'Cherry Bomb One', cursive;
   color: #333a4d;
-  }
-  
-  .littleTitle {
-    font-size: 60px;
-    font-family: 'Cherry Bomb One', cursive;
-    color: #333a4d;
-  }
-  
-  .navbar-nav {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .navbar-nav li {
-    display: inline-block;
-  }
+}
+
+.littleTitle {
+  font-size: 50px;
+  font-family: 'Cherry Bomb One', cursive;
+  color: #333a4d;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-nav li {
+  display: inline-block;
+}
+
 /* assorted animation classes */
-.fadeIntLeft {
-  animation: fadeInLeftBig;
+.fadeIn {
+  animation: fadeIn;
   animation-duration: 1.5s;
+}
+
+.fadeInLeft {
+  animation: fadeInLeftBig;
+  animation-duration: 1s;
 }
 
 .fadeInRight {
   animation: fadeInRightBig;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 .backInDown {
@@ -53,6 +59,12 @@
   animation-duration: 1s;
 }
 
+.lightSpeedLeft {
+  animation: lightSpeedInLeft;
+  animation-duration: 1s;
+}
+
+
 .rotIn {
   animation: rotateIn;
   animation-duration: 1s;
@@ -66,4 +78,14 @@
 .rollIn {
   animation: rollIn;
   animation-duration: 1s;
+}
+
+.tada {
+  animation: tada;
+  animation-duration: 1.5s;
+}
+
+.rubberBand{
+  animation: rubberBand;
+  animation-duration: 1.5s;
 }
