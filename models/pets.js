@@ -15,6 +15,10 @@ Pet.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    image: {
+      type: DataTypes.STRING, // You can use DataTypes.STRING to store the URL or path of the image file
+      allowNull: true, // Set to true if the image is optional, otherwise false
+    },
     type:{
       type: DataTypes.STRING,
       allowNull: false,
@@ -33,6 +37,10 @@ Pet.init(
       defaultValue: DataTypes.NOW,
     },
     description: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    last_seenLocation: {
       type: DataTypes.STRING,
       allowNull: true,
     },
