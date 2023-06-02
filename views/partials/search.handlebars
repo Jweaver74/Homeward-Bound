@@ -14,7 +14,7 @@
     class="form-inline my-2 my-lg-0 d-flex justify-content-center"
   >
     <input
-      class="searchfield"
+      class="searchfield rotIn"
       class="form-control mr-sm-2"
       type="search"
       placeholder="search for lost pet"
@@ -22,7 +22,7 @@
     />
     <button
       id="searchbutton"
-      class="btn btn-outline-success my-2 my-sm-0"
+      class="btn btn-outline-success my-2 my-sm-0 lightSpeedLeft"
       type="submit"
     >search</button>
   </form>
@@ -33,7 +33,7 @@
       <div class="row d-flex justify-content-center">
         {{#each pets as |pet|}}
           {{#unless pet.isFound}}
-            <div class="card m-3 text-center col-md-5 col-lg-3" id="spawnCards">
+            <div class="card m-3 text-center col-md-5 col-lg-3 flipIn" id="spawnCards">
               <div class="card-body border-bottom">
                 <h5>{{capitalize pet.name}}</h5>
                 <small class="text-muted">Posted by
