@@ -1,18 +1,19 @@
 <section class="card">
-    <h5 class="card-title p-3 mb-2 bg-black text-white">{{pet.name}} Posted by {{user.username}} </h5>
+  <h5 class="card-title p-3 mb-2 bg-black text-white">{{pet.name}} Posted by {{user.username}} </h5>
+  <img src="{{pet.image}}" alt="Pet Image">
 
-    <div class="fadeIn card-body">
-      <h3>Pet Information</h3>
-      <p class="card-text text-black">Type: {{pet.type}}</p>
-      <p class="card-text text-black">Breed: {{pet.breed}}</p>
-      <p class="card-text text-black">Age: {{pet.age}}</p>
-      <p class="card-text text-black">Description: {{pet.description}}</p>
-      <p class="card-text text-black">Owner Name: {{pet.owner_name}}</p>
-      <p class="card-text text-black">Owner Phone: {{pet.owner_phone}}</p>
-      <p class="card-text text-black">Owner Email: {{pet.owner_email}}</p>
-      <p class="card-text text-black">Reward: {{pet.reward}}</p>
+  <div class="fadeIn card-body">
+    <h3>Pet Information</h3>
+    <p class="card-text text-black">Type: {{pet.type}}</p>
+    <p class="card-text text-black">Breed: {{pet.breed}}</p>
+    <p class="card-text text-black">Age: {{pet.age}}</p>
+    <p class="card-text text-black">Description: {{pet.description}}</p>
+    <p>Last Seen At: {{pet.last_seenLocation}}</p>
+    <p class="card-text text-black">Owner Name: {{pet.owner_name}}</p>
+    <p class="card-text text-black">Owner Phone: {{pet.owner_phone}}</p>
+    <p class="card-text text-black">Owner Email: {{pet.owner_email}}</p>
+    <p class="card-text text-black">Reward: {{pet.reward}}</p>
 
-    </div>
-    {{!-- <a href='/profile/updatePet/{{id}}' class="edit-post-btns btn btn-primary mb-3 mx-3 rubberBand" id="edit-post-button"
-    style="width: 30%; padding: 3px;" type="submit">Edit Pet</a> --}}
+  </div>
+
 </section>

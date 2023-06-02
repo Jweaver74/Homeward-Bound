@@ -1,3 +1,9 @@
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
 .pgFormat {
   background-color: #d6b29cc3;
   color: #333a4d;
