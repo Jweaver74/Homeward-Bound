@@ -22,7 +22,7 @@ const petFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/profile');
       } else {
-        alert('Failed to add lost pet.');
+        alert('Failed to add pet.');
       }
     }
   };
