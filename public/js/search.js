@@ -13,3 +13,5 @@ const newSearchHandler = async (event) => {
 document
   .querySelector("#searchbutton")
   .addEventListener("click", newSearchHandler);
+
+  
