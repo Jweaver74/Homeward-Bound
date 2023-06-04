@@ -57,6 +57,11 @@ Homeward Bound
 To help lost pets find their way home.
 
 ## LiveLink
+## Screenshots
+![screenshot](./public/images/Homepage.png)
+![screenshot](./public/images/signin-signup.png)
+![screenshot](./public/images/report-lost-pet.png)
+![screenshot](./public/images/view-pets.png)
 
 ## Description
 Lost a pet?  Users Can sign-in or create a log-in if it is their first time visiting. You can then post lost pets for others to see and keep and eye out for your lost pet.
