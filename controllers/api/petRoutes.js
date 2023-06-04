@@ -60,6 +60,7 @@ router.put("/isFound/:id", async (req, res) => {
   }
 });
 
+
 router.post("/", withAuth, async (req, res) => {
   try {
     const newPet = await Pet.create({
@@ -74,6 +75,7 @@ router.post("/", withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 
 // DELETE /api/pets/:id
 router.delete("/:id", withAuth, async (req, res) => {
