@@ -20,7 +20,7 @@ Pet.init(
       allowNull: true, // Set to true if the image is optional, otherwise false
     },
     type:{
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM('dog', 'cat', 'bird', 'other'),
       allowNull: false,
     },
     breed:{

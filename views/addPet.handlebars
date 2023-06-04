@@ -9,8 +9,13 @@
                 <label for="add-pet-image" class="form-label">Image</label>
                 <input class="form-control" id="add-pet-image" type="file" accept="image/*">
                 <br>
-                <label for="add-pet-type" class="form-label">Type of Pet</label>
-                <input class="form-control backInDown" id="add-pet-type" type="text" placeholder="">
+                <label for="pet-type">Type:</label>
+<select id="pet-type" name="pet-type">
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="bird">Bird</option>
+  <option value="other">Other</option>
+</select>
                 <br>
                 <label for="add-pet-breed" class="form-label">Breed</label>
                 <input class="form-control rollIn" id="add-pet-breed" type="text" placeholder="">
