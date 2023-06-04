@@ -2,7 +2,7 @@
     {
         "name": "Shadow",
         "image": "/images/Shadow.PNG",
-        "type": "Mammal",
+        "type": "Dog",
         "breed": "Labrador",    
         "age": 5,
         "date_added": "2020-01-01",

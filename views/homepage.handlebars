@@ -12,13 +12,18 @@
     id="input"
     class="form-inline my-2 my-lg-0 d-flex justify-content-center"
   >
-    <input
-      id="searchfield"
-      class="form-control mr-sm-2"
-      type="search"
-      placeholder="search for lost pet"
-      aria-label="search"
-    />
+   <div>
+  <label for="search-pet">Search:</label>
+  
+
+  <label for="pet-type">Type:</label>
+  <select id="pet-type" name="pet-type">
+    <option value="dog">Dogs</option>
+    <option value="cat">Cats</option>
+    <option value="bird">Birds</option>
+    <option value="other">Other pets</option>
+  </select>
+</div>
     <button
       id="searchbutton"
       class="btn btn-outline-success my-2 my-sm-0"
@@ -38,5 +43,7 @@
 <h2>No missing pets</h2>
 {{/if}}
 </div>
+
+
 
 <script src="/js/search.js"></script>
