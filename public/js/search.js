@@ -14,4 +14,4 @@ document
   .querySelector("#searchbutton")
   .addEventListener("click", newSearchHandler);
 
-  
+

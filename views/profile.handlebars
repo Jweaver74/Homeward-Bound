@@ -14,5 +14,8 @@
     {{> pet-details}}
     <a href='/profile/updatePet/{{id}}' class="edit-post-btns btn btn-primary mb-3 mx-3" id="edit-post-button"
         style="width: 30%; padding: 3px;" type="submit">Edit Pet</a>
+    {{#each pet.statuses as |petStatus|}}
+        {{> pet-status}}
+    {{/each}}
     {{/each}}
 </div>
