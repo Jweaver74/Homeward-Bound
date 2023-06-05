@@ -5,10 +5,12 @@ const withAuth = require("../utils/auth");
 // GET /api/pets
 router.get("/:terms", async (req, res) => {
   let convert = req.params.terms.split("+").join(" ");
+  console.log("++++++");
+  console.log(req.params.terms);
   try {
     // Get all pets and JOIN with user data
     const petData = await Pet.findAll({
-      where: { name: convert },
+      where: { name: convert  },
       include: [
         {
           model: User,

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Pet,Notification} = require('../models');
+const { User, Pet, Status, Notification} = require('../models');
 const withAuth = require('../utils/auth');
 
 // Include the file system module which provides an API for interacting with the file system
@@ -140,8 +140,6 @@ router.post("/addPet", upload.single("image"), withAuth, async (req, res) => {
   }
 });
 
-
-
   router.get('/updatePet/:id', withAuth, async (req, res) => {
     try {
       const petData = await Pet.findByPk(req.params.id, {
@@ -152,11 +150,11 @@ router.post("/addPet", upload.single("image"), withAuth, async (req, res) => {
               exclude: ['password'],
             },
           },
-        //   { model: Comment,
-        //   include: [{
-        //     model: User,
-        //     attributes: ['username']
-        //   }] },
+          { model: Status,
+          include: [{
+            model: User,
+            attributes: ['username']
+          }] },
         ],
       });
     
@@ -168,11 +166,12 @@ router.post("/addPet", upload.single("image"), withAuth, async (req, res) => {
     }
   });
 
-// GET /api/pets/:id
 router.put('/updatePet/:id', withAuth, async (req, res) => {
     try {
+      console.log(req.body);
       const petId = req.params.id;
       const updatedPetData = req.body;
+
   
       const [numAffectedRows] = await Pet.update(updatedPetData, {
         where: {

@@ -1,3 +1,27 @@
-    {{#each pets as |pet|}}
-    {{> pet-details}}
-    {{/each}}
+<h1>Search Results</h1>
+
+{{#each pets}}
+<section class="card">
+  <br>
+  <a href="/pet/{{id}}">
+    <header>{{this.name}}</header>
+    <img src="{{this.image}}" alt="Pet Image">
+
+    <div class="fadeIn card-body">
+      <p>Reported By: {{user.username}}</p>
+      <br>
+      <h3>Pet Information</h3>
+      <p>Type: {{this.type}}</p>
+      <p>Breed: {{this.breed}}</p>
+      <p>Age: {{this.age}}</p>
+      <p>Description: {{this.description}}</p>
+      <p>Last Seen At: {{this.last_seenLocation}}</p>
+      <p>Owner Name: {{this.User.username}}</p>
+      <p>Owner Phone: {{this.User.phone}}</p>
+      <p>Owner Email: {{this.User.email}}</p>
+      <br>
+      <p>Reward: {{this.reward}}</p>
+    </div>
+  </a>
+</section>
+{{/each}}

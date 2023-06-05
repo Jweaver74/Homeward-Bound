@@ -39,6 +39,7 @@ const petFormHandler = async (event) => {
 
   const name = document.querySelector('#add-pet-name').value.trim();
   const image = document.querySelector('#add-pet-image').files[0];
+  const type = document.querySelector('#add-pet-type').value.trim();
   const breed = document.querySelector('#add-pet-breed').value.trim();
   const age = document.querySelector('#add-pet-age').value.trim();
   const date_added = document.querySelector('#add-pet-date-added').value.trim();

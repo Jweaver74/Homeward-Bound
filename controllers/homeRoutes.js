@@ -1,6 +1,6 @@
 const withAuth = require("../utils/auth");
 const router = require("express").Router();
-const { User, Pet, Notification } = require("../models");
+const { User, Pet, Notification, Status } = require("../models");
 //GET all items and join with user data
 router.get("/", async (req, res) => {
   try {
@@ -55,6 +55,15 @@ router.get("/pet/:id", async (req, res) => {
         {
           model: User,
           attributes: ["username"],
+        },
+        {
+          model: Status, // Include the Status model
+          include: [
+            {
+              model: User,
+              attributes: ["username"],
+            },
+          ],
         },
       ],
     });
