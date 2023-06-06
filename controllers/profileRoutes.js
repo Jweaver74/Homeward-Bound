@@ -100,7 +100,7 @@ router.post("/addPet", upload.single("image"), withAuth, async (req, res) => {
       reward: req.body.reward,
       image: req.file.path, // Save the initial path for now
     });
-
+   
     // Specify the new file path
     const newFilePath = path.join("public", "images", `${newPet.name}.png`);
 
@@ -114,7 +114,7 @@ router.post("/addPet", upload.single("image"), withAuth, async (req, res) => {
     const urlFilePath = newFilePath
       .split(path.sep)
       .join("/")
-      .replace("public/", "");
+      .replace("public", "");
 
     // Update the pet's image path in the database
     newPet.image = urlFilePath; // Use urlFilePath instead of newFilePath
@@ -158,26 +158,25 @@ router.post("/addPet", upload.single("image"), withAuth, async (req, res) => {
         ],
       });
     
-      const pets = petData.get({ plain: true });
-      res.render('updatePet', { pets, loggedIn: req.session.loggedIn });
+      const pet = petData.get({ plain: true });
+      res.render('updatePet', { pet, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
     }
   });
 
-router.put('/updatePet/:id', withAuth, async (req, res) => {
+router.put('/updatePet/:id', upload.single("image"), withAuth, async (req, res) => {
     try {
-      console.log(req.body);
       const petId = req.params.id;
       const updatedPetData = req.body;
 
-  
       const [numAffectedRows] = await Pet.update(updatedPetData, {
         where: {
           id: petId,
         },
       });
+
   
       if (numAffectedRows === 0) {
         res.status(404).json({ message: 'No pet with this id!' });

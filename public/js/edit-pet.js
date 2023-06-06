@@ -1,22 +1,28 @@
 const updatePet = async (event) => {
-  console.log('test');
   event.preventDefault();
 
-  const form = document.querySelector("#update-pet-form");
+  const form = document.getElementById("update-pet-form");
   const formData = new FormData(form);
   const petId = window.location.pathname.split("/")[3];
-  console.log(petId);
+  const petData = {};
+  const image = document.querySelector('#update-pet-image').files[0];
+  
+  for(let [name, value] of formData) {
+    if (name !== "image") {
+    petData[name]=value;
+    }
+  }
 
   try {
     const response = await fetch(`/profile/updatePet/${petId}`, {
       method: 'PUT',
-      body: formData,
+      body: JSON.stringify(petData), 
+      headers: {
+        "Content-Type": "application/json",
+      }
     });
-console.log(response);
+
     if (response.ok) {
-      // const updatedPetData = await fetch(`/profile/updatePet/${petId}`);
-      // const updatedPet = await updatedPetData.json();
-      // console.log("Updated Pet:", updatedPet);
       document.location.replace("/profile");
     } else {
       alert("Failed to update pet");
@@ -27,3 +33,4 @@ console.log(response);
 };
 
 document.querySelector("#update-pet-btn").addEventListener("click", updatePet);
+

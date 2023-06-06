@@ -48,7 +48,7 @@ router.get("/", async (req, res) => {
   }
 });
 //GET one item
-router.get("/pet/:id", async (req, res) => {
+router.get("/pet/:id", withAuth, async (req, res) => {
   try {
     const petData = await Pet.findByPk(req.params.id, {
       include: [
@@ -69,6 +69,7 @@ router.get("/pet/:id", async (req, res) => {
     });
     // Serialize data so the template can read it
     const pet = petData.get({ plain: true });
+    console.log(pet);
     if (req.session.logged_in) {
       const notificationData = await Notification.findAll({
         where: {

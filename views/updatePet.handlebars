@@ -2,7 +2,7 @@
   <div class="container">
     <div class="card">
       <form id="update-pet-form" class="mb-3">
-        <div class="mb-3">
+        {{!-- <div class="mb-3"> --}}
           <br />
           <label for="add-pet-name" class="form-label">Pet Name</label>
           <input
@@ -10,24 +10,21 @@
             id="add-pet-name"
             name="name"
             type="text"
+            value="{{pet.name}}"
             placeholder=""
           />
           <br />
-          <label for="add-pet-image" class="form-label">Image</label>
-          <input
-            class="form-control"
-            id="add-pet-image"
-            name="image"
-            type="file"
-            accept="image/*"
-          />
+          <label for="update-pet-image" class="form-label">Image</label>
+           <img src="{{pet.image}}" alt="Pet Image">
           <br />
           <label for="add-pet-type">Type:</label>
           <select id="add-pet-type" name="type">
+            {{#select pet.type}}
             <option value="dog">Dog</option>
             <option value="cat">Cat</option>
             <option value="bird">Bird</option>
             <option value="other">Other</option>
+            {{/select}}
           </select>
           <br />
           <label for="add-pet-breed" class="form-label">Breed</label>
@@ -36,6 +33,7 @@
             id="add-pet-breed"
             name="breed"
             type="text"
+            value="{{pet.breed}}"
             placeholder=""
           />
           <br />
@@ -45,6 +43,7 @@
             id="add-pet-age"
             name="age"
             type="text"
+            value="{{pet.age}}"
             placeholder=""
           />
           <br />
@@ -54,6 +53,7 @@
             id="add-pet-date-added"
             name="date_added"
             type="text"
+            value="{{pet.date_added}}"
             placeholder=""
           />
           <br />
@@ -63,6 +63,7 @@
             id="add-pet-description"
             name="description"
             type="text"
+            value="{{pet.description}}"
             placeholder=""
           />
           <br />
@@ -72,6 +73,7 @@
             id="add-last-seenLocation"
             name="last_seenLocation"
             type="text"
+            value="{{pet.last_seenLocation}}"
             placeholder=""
           />
           <br />
@@ -81,6 +83,7 @@
             id="add-pet-owner-name"
             name="owner_name"
             type="text"
+            value="{{pet.owner_name}}"
             placeholder=""
           />
           <br />
@@ -90,6 +93,7 @@
             id="add-pet-owner-phone"
             name="owner_phone"
             type="text"
+            value="{{pet.owner_phone}}"
             placeholder=""
           />
           <br />
@@ -99,6 +103,7 @@
             id="add-pet-owner-email"
             name="owner_email"
             type="text"
+            value="{{pet.owner_email}}"
             placeholder=""
           />
           <br />
@@ -108,9 +113,10 @@
             id="add-pet-reward"
             name="reward"
             type="text"
+            value="{{pet.reward}}"
             placeholder=""
           />
-        </div>
+        {{!-- </div> --}}
       </form>
       <div class="row justify-center m-3" style="width: 100%">
         <button class="btn btn-primary mx-1" id="update-pet-btn" style="padding: .75rem; margin-right: 10px;" type="submit">Update</button>
