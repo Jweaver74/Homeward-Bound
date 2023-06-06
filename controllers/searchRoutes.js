@@ -18,6 +18,11 @@ router.get("/:terms", async (req, res) => {
         },
       ],
     });
+
+    if (petData.length === 0) {
+      // No search results found, render the "no-results" page
+      return res.render("no-results");
+    }
     // Serialize data so the template can read it
     const pets = petData.map((pet) => pet.get({ plain: true }));
     // Pass serialized data and session flag into template
