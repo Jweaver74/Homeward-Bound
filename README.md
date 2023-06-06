@@ -15,6 +15,8 @@
 ![express-handlebars](https://img.shields.io/badge/express--handlebars-000000?style=for-the-badge&logo=express-handlebars&logoColor=white)
 ![express-session](https://img.shields.io/badge/express--session-000000?style=for-the-badge&logo=express-session&logoColor=white)
 ![animate.css](https://img.shields.io/badge/animate.css-000000?style=for-the-badge&logo=animate.css&logoColor=white)
+![sharp](https://img.shields.io/badge/sharp-000000?style=for-the-badge&logo=sharp&logoColor=white)
+![multer](https://img.shields.io/badge/multer-000000?style=for-the-badge&logo=multer&logoColor=white)
 
 
 
@@ -27,6 +29,8 @@
 \*[usage](#usage)
 
 \*[livelink](#livelink)
+
+\*[screenshots](#screenshots)
 
 \*[description](#description)
 
@@ -57,6 +61,8 @@ Homeward Bound
 To help lost pets find their way home.
 
 ## LiveLink
+https://warm-fortress-51039.herokuapp.com/
+
 ## Screenshots
 ![screenshot](./public/images/Homepage.png)
 ![screenshot](./public/images/signin-signup.png)
@@ -86,12 +92,19 @@ Antoine Michels
  
   Jason Weaver
 
+  With Assistance from:Tyler Calvert, and TA Austin Miller
+
 ## Challenge
 
 ## GitHub
 https://github.com/JenWariner19/homeward-bound
 
 ## Email
+Jason-jamaweaver@yahoo.com
+Antoine-antoinedmichels@gmail.com
+Jerrick-jerrickjohnson88@gmail.com
+Jen-wariner-jenniferwariner@yahoo.com
+
 
 ## Questions
 
