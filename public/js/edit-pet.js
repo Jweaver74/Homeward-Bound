@@ -5,7 +5,6 @@ const updatePet = async (event) => {
   const formData = new FormData(form);
   const petId = window.location.pathname.split("/")[3];
   const petData = {};
-  const image = document.querySelector('#update-pet-image').files[0];
   
   for(let [name, value] of formData) {
     if (name !== "image") {

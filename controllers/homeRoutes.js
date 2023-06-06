@@ -56,15 +56,6 @@ router.get("/pet/:id", withAuth, async (req, res) => {
           model: User,
           attributes: ["username"],
         },
-        {
-          model: Status, // Include the Status model
-          include: [
-            {
-              model: User,
-              attributes: ["username"],
-            },
-          ],
-        },
       ],
     });
     // Serialize data so the template can read it

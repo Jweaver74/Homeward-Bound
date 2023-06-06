@@ -150,11 +150,6 @@ router.post("/addPet", upload.single("image"), withAuth, async (req, res) => {
               exclude: ['password'],
             },
           },
-          { model: Status,
-          include: [{
-            model: User,
-            attributes: ['username']
-          }] },
         ],
       });
     
