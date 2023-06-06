@@ -76,64 +76,6 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-router.get('/:id/addStatus', withAuth, async (req, res) => {
-  try {
-    const petData = await Pet.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: {
-            exclude: ['password'],
-          },
-        },
-      ],
-    });
-
-    const pet = petData.get({ plain: true });
-
-    res.render('addStatus', { pet, loggedIn: req.session.loggedIn });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
-router.post('/:id/addStatus', withAuth, async (req, res) => {
-  try {
-    const newStatus = await Status.create({
-      user_id: req.session.user_id,
-      pet_id: req.params.id,
-      content: req.body.content,
-    });
-    const petData = await Pet.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: {
-            exclude: ['password'],
-          },
-        },
-        {
-          model: Status,
-          include: [
-            {
-              model: User,
-              attributes: ['username'],
-            },
-          ],
-        },
-      ],
-    });
-
-  const pet = petData.get({ plain: true });
-
-  res.render('profile', { pet, loggedIn: req.session.loggedIn });
-} catch (err) {
-  console.log(err);
-  res.status(500).json(err);
-}
-});
-
 
 // DELETE /api/pets/:id
 router.delete("/:id", withAuth, async (req, res) => {

@@ -16,7 +16,7 @@
       id="searchfield"
       class="form-control mr-sm-2"
       type="search"
-      placeholder="search for lost pet"
+      placeholder="search by pet's name"
       aria-label="search"
     />
     <button
@@ -31,7 +31,7 @@
     <br>
     <h2>Current List of Lost Pets</h2>
     {{#each pets as |pet|}}
-    {{> pet-details}}
+    {{> partial-pet}}
     {{/each}}
 
 {{else}}

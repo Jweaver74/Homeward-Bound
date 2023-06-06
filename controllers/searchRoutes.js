@@ -10,7 +10,7 @@ router.get("/:terms", async (req, res) => {
   try {
     // Get all pets and JOIN with user data
     const petData = await Pet.findAll({
-      where: { name: convert  },
+      where: { name: convert },
       include: [
         {
           model: User,

@@ -1,0 +1,22 @@
+<section class="card">
+  <br>
+  <a href="/pet/{{id}}">
+    <header>{{name}}</header>
+    <img src="{{image}}" alt="Pet Image">
+
+    <div class="fadeIn card-body">
+      <p>Reported By: {{user.username}}</p>
+      <br>
+      <p>Date Reported: {{format_date date_added}}</p>
+      <br>
+      <h3>Pet Information</h3>
+      <p>Type: {{type}}</p>
+      <p>Breed: {{breed}}</p>
+      <p>Age: {{age}}</p>
+      <p>Description: {{description}}</p>
+      <p>Last Seen At: {{last_seenLocation}}</p>
+      <br>
+      <p>Reward: {{reward}}</p>
+    </div>
+  </a>
+</section>
