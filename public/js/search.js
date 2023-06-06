@@ -7,6 +7,8 @@ const newSearchHandler = async (event) => {
   if (search) {
     console.log(search);
     document.location.replace(`/search/${search}`);
+  } else {
+    document.location.replace(`/no-results`);
   }
 };
 
@@ -15,3 +17,4 @@ document
   .addEventListener("click", newSearchHandler);
 
 
+  

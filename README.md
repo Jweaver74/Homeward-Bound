@@ -103,7 +103,7 @@ https://github.com/JenWariner19/homeward-bound
 Jason-jamaweaver@yahoo.com
 Antoine-antoinedmichels@gmail.com
 Jerrick-jerrickjohnson88@gmail.com
-Jen-warinerjen19@gmail.com
+Jen-wariner-jenniferwariner@yahoo.com
 
 
 ## Questions
